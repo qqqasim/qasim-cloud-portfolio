@@ -16,16 +16,31 @@
       background-color: #f4f6f8;
       color: #333;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex: 1;
       padding: 40px;
     }
-    header {
+    .sidebar {
+      width: 20%;
+      padding-right: 20px;
+    }
+    .main-content {
+      width: 80%;
+    }
+    header, footer {
       text-align: center;
-      margin-bottom: 40px;
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px;
     }
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
-      color: #2c3e50;
     }
     h2 {
       font-size: 1.75rem;
@@ -66,72 +81,92 @@
     <h1>Muhammad Qasim</h1>
     <p>System & Cloud Engineer</p>
     <p>Email: Qasim.ali135@yahoo.com | Phone: +92-336-5007345</p>
-    <p><a href="https://qqqasim.github.io/qasim-cloud-portfolio/" target="_blank">Portfolio Website</a> | LinkedIn: muhammad-qasim-1b861131</p>
+    <p><a href="https://qqqasim.github.io/qasim-cloud-portfolio/" target="_blank" style="color:#f1c40f;">Visit My Portfolio</a> | LinkedIn: muhammad-qasim-1b861131</p>
   </header>
 
-  <section class="section">
-    <h2>Professional Summary</h2>
-    <p>Versatile and certified System & Cloud Engineer with 10+ years of experience delivering highly available, secure, and scalable cloud and on-prem solutions. Adept at designing robust AWS infrastructures, automating deployments, and optimizing systems for maximum performance and cost-efficiency. Proven expertise in web hosting platforms, DevOps pipelines, Linux administration, virtualization, and secure enterprise network architecture.</p>
-  </section>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#linux">Linux Admin</a></li>
+        <li><a href="#clients">Clients</a></li>
+      </ul>
+    </aside>
 
-  <section class="section">
-    <h2>Education & Professional Qualifications</h2>
-    <ul>
-      <li>Bachelor of Science in Computer Science – Islamia University, Bahawalpur (2013)</li>
-      <li>Certifications: AWS (CLF-C01), Ansible (EX294), Certified Kubernetes Administrator (CKA), RHCSA, RHCE, MCITP, CCNA</li>
-      <li>Trainings: AWS, VMware, Docker, Kubernetes, Git, CI/CD, DevOps, Infrastructure Automation</li>
-      <li>Affiliations: CisCom (ciscom.pk)</li>
-    </ul>
-  </section>
+    <main class="main-content">
+      <section class="section" id="summary">
+        <h2>Professional Summary</h2>
+        <p>Versatile and certified System & Cloud Engineer with 10+ years of experience delivering highly available, secure, and scalable cloud and on-prem solutions. Adept at designing robust AWS infrastructures, automating deployments, and optimizing systems for maximum performance and cost-efficiency. Proven expertise in web hosting platforms, DevOps pipelines, Linux administration, virtualization, and secure enterprise network architecture.</p>
+      </section>
 
-  <section class="section">
-    <h2>Executive Career History</h2>
-    <ul>
-      <li>System, Network & Cloud Lead – Simplex Technology Solutions (Oct 2020 – Present)</li>
-      <li>Senior Linux & Cloud Engineer – Zaryansgroup (Feb 2018 – Oct 2020)</li>
-      <li>System & Network Engineer – Digital Media Distribution Max (Jul 2016 – Jan 2018)</li>
-      <li>System Administrator II – U-Microfinance Bank (Nov 2015 – Jul 2016)</li>
-      <li>System & Network Administrator – eConceptions (Jan 2013 – Nov 2015)</li>
-    </ul>
-  </section>
+      <section class="section" id="education">
+        <h2>Education & Professional Qualifications</h2>
+        <ul>
+          <li>Bachelor of Science in Computer Science – Islamia University, Bahawalpur (2013)</li>
+          <li>Certifications: AWS (CLF-C01), Ansible (EX294), Certified Kubernetes Administrator (CKA), RHCSA, RHCE, MCITP, CCNA</li>
+          <li>Trainings: AWS, VMware, Docker, Kubernetes, Git, CI/CD, DevOps, Infrastructure Automation</li>
+          <li>Affiliations: CisCom (ciscom.pk)</li>
+        </ul>
+      </section>
 
-  <section class="section">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Cloud Platforms:</strong> AWS, LightSail, EC2, S3, RDS, VPC, CloudFront, IAM, Route 53, CloudFormation, WAF</li>
-      <li><strong>DevOps & CI/CD:</strong> Jenkins, Git, GitHub Actions, Bitbucket Pipelines, CodeDeploy, Docker, Kubernetes, Helm</li>
-      <li><strong>Infrastructure Automation:</strong> Ansible, Terraform, Bash, Cron jobs</li>
-      <li><strong>Monitoring & Logging:</strong> CloudWatch, CloudTrail, AWS Config, ELK Stack, Prometheus, Grafana</li>
-      <li><strong>Security & Networking:</strong> IAM, MFA, encryption (KMS), VPNs, firewalls, NACLs, SSL/TLS, intrusion prevention</li>
-      <li><strong>Virtualization:</strong> VMware vSphere, ESXi, vCenter, Proxmox</li>
-      <li><strong>Linux Administration:</strong> RHEL, CentOS, Ubuntu, LAMP/LEMP stacks, user roles, SELinux, systemd, fail2ban</li>
-    </ul>
-  </section>
+      <section class="section" id="career">
+        <h2>Executive Career History</h2>
+        <ul>
+          <li>System, Network & Cloud Lead – Simplex Technology Solutions (Oct 2020 – Present)</li>
+          <li>Senior Linux & Cloud Engineer – Zaryansgroup (Feb 2018 – Oct 2020)</li>
+          <li>System & Network Engineer – Digital Media Distribution Max (Jul 2016 – Jan 2018)</li>
+          <li>System Administrator II – U-Microfinance Bank (Nov 2015 – Jul 2016)</li>
+          <li>System & Network Administrator – eConceptions (Jan 2013 – Nov 2015)</li>
+        </ul>
+      </section>
 
-  <section class="section">
-    <h2>Linux Server Administration</h2>
-    <ul>
-      <li>Managed production-grade Linux environments with a focus on uptime, performance, and security</li>
-      <li>Implemented automated provisioning and patching using Ansible and custom scripts</li>
-      <li>Performed system hardening, vulnerability assessments, log audits, and real-time monitoring</li>
-      <li>Configured Apache/Nginx, MySQL/MariaDB, and PHP/Python apps with SSL and caching</li>
-      <li>Handled virtualization, backups, RAID storage, disaster recovery, and BCP planning</li>
-    </ul>
-  </section>
+      <section class="section" id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Cloud Platforms:</strong> AWS, LightSail, EC2, S3, RDS, VPC, CloudFront, IAM, Route 53, CloudFormation, WAF</li>
+          <li><strong>DevOps & CI/CD:</strong> Jenkins, Git, GitHub Actions, Bitbucket Pipelines, CodeDeploy, Docker, Kubernetes, Helm</li>
+          <li><strong>Infrastructure Automation:</strong> Ansible, Terraform, Bash, Cron jobs</li>
+          <li><strong>Monitoring & Logging:</strong> CloudWatch, CloudTrail, AWS Config, ELK Stack, Prometheus, Grafana</li>
+          <li><strong>Security & Networking:</strong> IAM, MFA, encryption (KMS), VPNs, firewalls, NACLs, SSL/TLS, intrusion prevention</li>
+          <li><strong>Virtualization:</strong> VMware vSphere, ESXi, vCenter, Proxmox</li>
+          <li><strong>Linux Administration:</strong> RHEL, CentOS, Ubuntu, LAMP/LEMP stacks, user roles, SELinux, systemd, fail2ban</li>
+        </ul>
+      </section>
 
-  <section class="section">
-    <h2>Key Clients</h2>
-    <div class="clients-logos">
-      <img src="images/kfc.png" alt="KFC Pakistan">
-      <img src="images/dominos.png" alt="Domino's Pakistan">
-      <img src="images/pizzahut-qa.png" alt="Pizza Hut Qatar">
-      <img src="images/pizzahut-sa.png" alt="Pizza Hut South Africa">
-      <img src="images/crustculture.png" alt="Crust Culture">
-      <img src="images/halla.png" alt="Halla Shawarma">
-      <img src="images/kyochon.png" alt="Kyochon ME">
-      <img src="images/optp.png" alt="OPTP Pakistan">
-    </div>
-  </section>
+      <section class="section" id="linux">
+        <h2>Linux Server Administration</h2>
+        <ul>
+          <li>Managed production-grade Linux environments with a focus on uptime, performance, and security</li>
+          <li>Implemented automated provisioning and patching using Ansible and custom scripts</li>
+          <li>Performed system hardening, vulnerability assessments, log audits, and real-time monitoring</li>
+          <li>Configured Apache/Nginx, MySQL/MariaDB, and PHP/Python apps with SSL and caching</li>
+          <li>Handled virtualization, backups, RAID storage, disaster recovery, and BCP planning</li>
+        </ul>
+      </section>
+
+      <section class="section" id="clients">
+        <h2>Key Clients</h2>
+        <div class="clients-logos">
+          <img src="images/kfc.png" alt="KFC Pakistan">
+          <img src="images/dominos.png" alt="Domino's Pakistan">
+          <img src="images/pizzahut-qa.png" alt="Pizza Hut Qatar">
+          <img src="images/pizzahut-sa.png" alt="Pizza Hut South Africa">
+          <img src="images/crustculture.png" alt="Crust Culture">
+          <img src="images/halla.png" alt="Halla Shawarma">
+          <img src="images/kyochon.png" alt="Kyochon ME">
+          <img src="images/optp.png" alt="OPTP Pakistan">
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Muhammad Qasim. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
